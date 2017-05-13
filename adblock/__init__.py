@@ -26,6 +26,8 @@ def onQQMessage(bot, contact, member, content):
 		kickUser(bot, contact, member, content)
 	if  '点击群号秒进' in content:
 		kickUser(bot, contact, member, content)	
+	if  '双击群号' in content:
+		kickUser(bot, contact, member, content)	
 	#以下关键词会被禁言
 	if  'http://' in content or 'https://' in content or '.cn' in content or '.com' in content:
 		shutUser(bot, contact, member, content)
