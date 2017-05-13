@@ -2,8 +2,16 @@
 import pymysql  
 import datetime
 def onQQMessage(bot, contact, member, content):
+	if  '找我'  in content:
+		insertChatAdContent(bot,contact,member,content,'找我')
+	if  '优惠'  in content:
+		insertChatAdContent(bot,contact,member,content,'优惠')
+	if  '要的加我'  in content:
+		insertChatAdContent(bot,contact,member,content,'要的加我')	
 	if  '/色  /色  /色'  in content:
 		insertChatAdContent(bot,contact,member,content,'/色  /色  /色')	
+	if  '加我'  in content:
+		insertChatAdContent(bot,contact,member,content,'加我')		
 	if  '私聊'  in content:
 		insertChatAdContent(bot,contact,member,content,'私聊')
 	if  '可联系我'  in content:
