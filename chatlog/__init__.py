@@ -29,3 +29,4 @@ def insertChatContent(bot,contact,member,content):
 	cursor.execute(sql % data)  
 	connect.commit()  
 	print('insert success', cursor.rowcount, ' record') 
+	
