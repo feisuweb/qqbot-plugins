@@ -55,6 +55,9 @@ def onQQMessage(bot, contact, member, content):
 	if  'http://' in content or 'https://' in content or '.cn' in content or '.com' in content:
 		shutUser(bot, contact, member, content)
 		insertChatAdContent(bot,contact,member,content,'网址')
+	if  '出售' in content:
+		shutUser(bot, contact, member, content)
+		insertChatAdContent(bot,contact,member,content,'网址')
 	if  'QQ：' in content:
 		shutUser(bot, contact, member, content)
 		insertChatAdContent(bot,contact,member,content,'QQ：')

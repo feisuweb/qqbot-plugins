@@ -52,7 +52,8 @@ def onQQMessage(bot, contact, member, content):
 		insertChatAdContent(bot,contact,member,content,'双击群号')
 	if  '点击群号' in content:
 		insertChatAdContent(bot,contact,member,content,'点击群号')
-		
+	if  '出售' in content:
+		insertChatAdContent(bot,contact,member,content,'出售')		
 	#以下关键词会被禁言
 	if  'http://' in content or 'https://' in content or '.cn' in content or '.com' in content:
 		insertChatAdContent(bot,contact,member,content,'网址')

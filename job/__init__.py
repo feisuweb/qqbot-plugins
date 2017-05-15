@@ -2,23 +2,25 @@
 import pymysql  
 import datetime
 def onQQMessage(bot, contact, member, content):
-	if '私聊' in content:
-		insertJobContent(bot,contact,member,content,'私聊')
+	if '会的私聊' in content:
+		insertJobContent(bot,contact,member,content,'会的私聊')
 		return
 	if '谁会' in content:
 		insertJobContent(bot,contact,member,content,'谁会')
 		return
-		
+	if '有会' in content:
+		insertJobContent(bot,contact,member,content,'有会')
+		return		
 	if '谁能做' in content:
 		insertJobContent(bot,contact,member,content,'谁能做')
 		return
 		
-	if '需要' in content and '谁需要' not in content:
+	if '需要' in content and '谁需要' not in content and '需要的' not in content:
 		insertJobContent(bot,contact,member,content,'需要')
 		return
 		
-	if '开发' in content:
-		insertJobContent(bot,contact,member,content,'开发')
+	if '做过' in content:
+		insertJobContent(bot,contact,member,content,'做过')
 		return
 		
 	if '制作' in content:
@@ -82,4 +84,5 @@ def insertJobContent(bot,contact,member,content,keyword):
 	cursor.execute(sql % data)  
 	connect.commit()  
 	print('insert job success', cursor.rowcount, ' record') 
-	
+    #将记录转发到外包群
+    
