@@ -3,9 +3,12 @@ import pymysql
 import datetime
 def onQQMessage(bot, contact, member, content):
     if '招聘' in content:
-		insertRecruitmentContent(bot,contact,member,content,'招聘')
+        insertRecruitmentContent(bot,contact,member,content,'招聘')
+        return
+        
     if '招' in content and '诚招代理' not in content and '代理' not in content and '中招' not in content:
-		insertRecruitmentContent(bot,contact,member,content,'招')		
+        insertRecruitmentContent(bot,contact,member,content,'招')		
+        return
 
 def insertRecruitmentContent(bot,contact,member,content,keyword):
 	# 连接数据库  
