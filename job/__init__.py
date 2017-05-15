@@ -2,6 +2,12 @@
 import pymysql  
 import datetime
 def onQQMessage(bot, contact, member, content):
+	if '求教' in content:
+		insertJobContent(bot,contact,member,content,'求教')
+		return
+	if '付费求教' in content:
+		insertJobContent(bot,contact,member,content,'付费求教')
+		return
 	if '会的私聊' in content:
 		insertJobContent(bot,contact,member,content,'会的私聊')
 		return
@@ -53,7 +59,9 @@ def onQQMessage(bot, contact, member, content):
 	if '帮忙' in content:
 		insertJobContent(bot,contact,member,content,'帮忙')
 		return
-		
+	if '付费' in content:
+		insertJobContent(bot,contact,member,content,'付费')
+		return		
 	if '[@ME]' in content:
 		insertJobContent(bot,contact,member,content,'@我')	
 		bot.SendTo(contact, '@'+member.name+' 您好，请问我能帮到您做什么？')

@@ -8,7 +8,7 @@ def mytask(bot):
     gl = bot.List('group', '深圳IT外包-总群')
     if gl is not None:
         for group in gl:
-            bot.SendTo(group, '同志们：开饭啦啦啦啦啦啦！！！')
+            bot.SendTo(group, '同志们：快下班了...撤退倒计时..')
 
 if __name__ == '__main__':
     RunBot()
