@@ -18,3 +18,16 @@ CREATE TABLE `chat_logs` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5093 DEFAULT CHARSET=utf8 COMMENT='聊天记录表';
 ```
+
+# 修改对应的数据库配置
+```
+    # 连接数据库  
+    connect = pymysql.Connect(  
+        host='localhost',  
+        port=3306,  
+        user='root',  
+        passwd='root',  
+        db='it_work_db',  
+        charset='utf8'  
+    ) 
+```
