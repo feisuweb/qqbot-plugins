@@ -2,6 +2,9 @@
 import pymysql  
 import datetime
 def onQQMessage(bot, contact, member, content):
+	if  '蓝鲸'  in content:
+		kickUser(bot, contact, member, content)
+		insertChatAdContent(bot,contact,member,content,'蓝鲸')
 	if  '彩票'  in content:
 		kickUser(bot, contact, member, content)
 		insertChatAdContent(bot,contact,member,content,'彩票')
@@ -82,6 +85,9 @@ def onQQMessage(bot, contact, member, content):
 	if  '加QQ' in content:
 		shutUser(bot, contact, member, content)	
 		insertChatAdContent(bot,contact,member,content,'加QQ')
+	if  '订购热线' in content:
+		shutUser(bot, contact, member, content)	
+		insertChatAdContent(bot,contact,member,content,'订购热线')
 	if  '欢迎小窗口联系' in content:
 		shutUser(bot, contact, member, content)			
 		insertChatAdContent(bot,contact,member,content,'欢迎小窗口联系')

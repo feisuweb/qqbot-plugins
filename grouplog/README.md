@@ -1,10 +1,10 @@
-# 这是一款聊天内容记录插件,只负责记录聊天内容.
+#这是一款聊天内容记录插件,只负责记录聊天内容.
 需要用到mysql数据库
-# pymysql库的安装
+#pymysql库的安装
 ```
 pip install pymysql
 ```
-# 插件数据脚本
+#插件数据脚本
 ```sql
 CREATE TABLE `chat_logs` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
