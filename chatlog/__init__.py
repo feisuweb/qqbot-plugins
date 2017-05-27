@@ -2,7 +2,8 @@
 import pymysql  
 import datetime
 def onQQMessage(bot, contact, member, content):
-	insertChatContent(bot,contact,member,content)
+	    if contact.ctype == 'group':
+			insertChatContent(bot,contact,member,content)
 
 
 def insertChatContent(bot,contact,member,content):

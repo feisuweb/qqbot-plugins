@@ -2,95 +2,96 @@
 import pymysql  
 import datetime
 def onQQMessage(bot, contact, member, content):
-	if  '蓝鲸'  in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'蓝鲸')
-	if  '彩票'  in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'彩票')
-	if  '需要请联系本Q'  in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'需要请联系本Q')
-	if  '免费注册公司'  in content:
-		kickUser(bot, contact, member, content)		
-		insertChatAdContent(bot,contact,member,content,'免费注册公司')
-	if  '代理记账报税'  in content:
-		kickUser(bot, contact, member, content)		
-		insertChatAdContent(bot,contact,member,content,'代理记账报税')
-	if  '开正规发票'  in content:
-		kickUser(bot, contact, member, content)		
-		insertChatAdContent(bot,contact,member,content,'开正规发票')
-	if  '真人娱乐'  in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'真人娱乐')
-	if  '飞讯群发器' in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'飞讯群发器')
-	if  '群发器' in content:
-		kickUser(bot, contact, member, content)		
-		insertChatAdContent(bot,contact,member,content,'群发器')
-	if  '进群' in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'进群')
-	if  '免费观看' in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'免费观看')
-	if  '色情群' in content:
-		kickUser(bot, contact, member, content)		
-		insertChatAdContent(bot,contact,member,content,'色情群')
-	if  '欢迎加群' in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'欢迎加群')
-	if  '网站 8222' in content:
-		kickUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'网站 8222')
-	if  '点击群号秒进' in content:
-		kickUser(bot, contact, member, content)	
-		insertChatAdContent(bot,contact,member,content,'点击群号秒进')
-	if  '双击群号' in content:
-		kickUser(bot, contact, member, content)	
-		insertChatAdContent(bot,contact,member,content,'双击群号')
-	if  '点击群号' in content:
-		kickUser(bot, contact, member, content)	
-		insertChatAdContent(bot,contact,member,content,'点击群号')
-		
-	#以下关键词会被禁言
-	if  'http://' in content or 'https://' in content or '.cn' in content or '.com' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'网址')
-	if  '出售' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'网址')
-	if  'QQ：' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'QQ：')
-	if  'QQ:' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'QQ')
-	if  '加我微信' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'加我微信')
-	if  '加微信' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'加微信')
-	if  '加我QQ' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'加我QQ')
-	if  '加我扣扣' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'加我扣扣')
-	if  '加扣扣' in content:
-		shutUser(bot, contact, member, content)
-		insertChatAdContent(bot,contact,member,content,'加扣扣')
-	if  '加QQ' in content:
-		shutUser(bot, contact, member, content)	
-		insertChatAdContent(bot,contact,member,content,'加QQ')
-	if  '订购热线' in content:
-		shutUser(bot, contact, member, content)	
-		insertChatAdContent(bot,contact,member,content,'订购热线')
-	if  '欢迎小窗口联系' in content:
-		shutUser(bot, contact, member, content)			
-		insertChatAdContent(bot,contact,member,content,'欢迎小窗口联系')
+	if contact.ctype == 'group':
+		if  '蓝鲸'  in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'蓝鲸')
+		if  '彩票'  in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'彩票')
+		if  '需要请联系本Q'  in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'需要请联系本Q')
+		if  '免费注册公司'  in content:
+			kickUser(bot, contact, member, content)		
+			insertChatAdContent(bot,contact,member,content,'免费注册公司')
+		if  '代理记账报税'  in content:
+			kickUser(bot, contact, member, content)		
+			insertChatAdContent(bot,contact,member,content,'代理记账报税')
+		if  '开正规发票'  in content:
+			kickUser(bot, contact, member, content)		
+			insertChatAdContent(bot,contact,member,content,'开正规发票')
+		if  '真人娱乐'  in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'真人娱乐')
+		if  '飞讯群发器' in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'飞讯群发器')
+		if  '群发器' in content:
+			kickUser(bot, contact, member, content)		
+			insertChatAdContent(bot,contact,member,content,'群发器')
+		if  '进群' in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'进群')
+		if  '免费观看' in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'免费观看')
+		if  '色情群' in content:
+			kickUser(bot, contact, member, content)		
+			insertChatAdContent(bot,contact,member,content,'色情群')
+		if  '欢迎加群' in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'欢迎加群')
+		if  '网站 8222' in content:
+			kickUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'网站 8222')
+		if  '点击群号秒进' in content:
+			kickUser(bot, contact, member, content)	
+			insertChatAdContent(bot,contact,member,content,'点击群号秒进')
+		if  '双击群号' in content:
+			kickUser(bot, contact, member, content)	
+			insertChatAdContent(bot,contact,member,content,'双击群号')
+		if  '点击群号' in content:
+			kickUser(bot, contact, member, content)	
+			insertChatAdContent(bot,contact,member,content,'点击群号')
+			
+		#以下关键词会被禁言
+		if  'http://' in content or 'https://' in content or '.cn' in content or '.com' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'网址')
+		if  '出售' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'网址')
+		if  'QQ：' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'QQ：')
+		if  'QQ:' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'QQ')
+		if  '加我微信' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'加我微信')
+		if  '加微信' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'加微信')
+		if  '加我QQ' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'加我QQ')
+		if  '加我扣扣' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'加我扣扣')
+		if  '加扣扣' in content:
+			shutUser(bot, contact, member, content)
+			insertChatAdContent(bot,contact,member,content,'加扣扣')
+		if  '加QQ' in content:
+			shutUser(bot, contact, member, content)	
+			insertChatAdContent(bot,contact,member,content,'加QQ')
+		if  '订购热线' in content:
+			shutUser(bot, contact, member, content)	
+			insertChatAdContent(bot,contact,member,content,'订购热线')
+		if  '欢迎小窗口联系' in content:
+			shutUser(bot, contact, member, content)			
+			insertChatAdContent(bot,contact,member,content,'欢迎小窗口联系')
 
 #踢出用户出群		
 def kickUser(bot, contact, member, content):
