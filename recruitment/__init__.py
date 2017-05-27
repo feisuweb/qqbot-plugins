@@ -16,7 +16,7 @@ def insertRecruitmentContent(bot,contact,member,content,keyword):
 		host='localhost',  
 		port=3306,  
 		user='root',  
-		passwd='root',  
+		passwd='mysql',  
 		db='it_work_db',  
 		charset='utf8'  
 	)  
