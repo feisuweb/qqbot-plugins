@@ -29,8 +29,8 @@ def onQQMessage(bot, contact, member, content):
     # content : str 对象，消息内容
 	if contact.ctype == 'group':
 		if  '麻将'  in content:
-			kickUser(bot, contact, member, content)
-			insertChatAdContent(bot,contact,member,content,'麻将')
+            kickUser(bot, contact, member, content)
+            insertChatAdContent(bot,contact,member,content,'麻将')
 		if  '蓝鲸'  in content:
 			kickUser(bot, contact, member, content)
 			insertChatAdContent(bot,contact,member,content,'蓝鲸')

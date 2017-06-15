@@ -31,9 +31,9 @@ def onQQMessage(bot, contact, member, content):
         if  '麻将'  in content:
             insertChatAdContent(bot,contact,member,content,'麻将')
             return
-		if  '蓝鲸'  in content:
-            insertChatAdContent(bot,contact,member,content,'蓝鲸')
-            return
+        if  '蓝鲸'  in content:
+			insertChatAdContent(bot,contact,member,content,'蓝鲸')
+			return
         if  '找我'  in content:
             insertChatAdContent(bot,contact,member,content,'找我')
             return
